@@ -14,6 +14,8 @@ class Alarm:
         if (psi_pressure_value < self._low_pressure_threshold or
                 self._high_pressure_threshold < psi_pressure_value):
             self._is_alarm_on = True
+        else:
+            self._is_alarm_on = False
 
     @property
     def is_alarm_on(self):
