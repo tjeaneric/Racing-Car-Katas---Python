@@ -1,6 +1,15 @@
 from tire_pressure_monitoring_system.sensor import Sensor
 
 
+class TestSensor(Sensor):
+
+    def __init__(self, value):
+        self.value = value
+
+    def pop_next_pressure_psi_value(self):
+        return self.value
+
+
 class Alarm:
 
     def __init__(self):
